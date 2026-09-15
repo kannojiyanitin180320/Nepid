@@ -1154,7 +1154,25 @@ body.dark-theme .search-go-btn {
         --input-bg: #0f172a !important;
         --border-color: rgba(255,255,255,0.1) !important;
     }
+/* --- SEARCH VIEW DARK MODE OVERRIDES (Bina HTML change kiye) --- */
+body.dark-mode #search-view .table-card {
+    background-color: rgba(15, 23, 42, 0.6) !important; /* Dark theme card background */
+    border: 1px solid rgba(56, 189, 248, 0.15) !important;
+}
 
+body.dark-mode #search-view th {
+    color: #38bdf8 !important; /* Cyan color for table headings */
+    border-bottom-color: rgba(56, 189, 248, 0.15) !important;
+}
+
+body.dark-mode #search-view tr {
+    border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode #search-view td, 
+body.dark-mode #search-results-table span {
+    color: #ffffff !important; /* White text for search results */
+}
 
     </style>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
