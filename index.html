@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nepid | E-book</title>
@@ -1156,6 +1157,7 @@ body.dark-theme .search-go-btn {
 
 
     </style>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -1283,11 +1285,7 @@ body.dark-theme .search-go-btn {
     <button onclick="executeSearch()" class="search-go-btn" style="position: absolute; right: 5px; border: none; border-radius: 15px; padding: 6px 15px; font-size: 12px; font-weight: 600; cursor: pointer; transition: 0.3s;">Go</button>
 </div>
                 
-              <!-- Pehle jaisa button hoga, bas id="authButton" jod dein -->
-<a href="#" id="authButton" onclick="showSignup(); return false;" class="btn btn-primary" style="padding: 10px 20px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; text-align: center;">
-    Join Now
-</a>
-            </div>
+             
             </div>
         </div>
     </header>
@@ -1466,31 +1464,31 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="notes-table-it">
                             <tr>
                                 <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Imperative Programming</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1IP(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Programming with C</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1PC(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #2 Digital Electronics</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1DE(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #2 Database Management System (DBMS)</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1DBMS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #3 Operating Systems</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1OS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #3 Communication Skill</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1CS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">4</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #4 Discrete Mathematics</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1DM(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #4 Soft Skill</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1SS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">5</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #5 Communication Skills</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1CS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #5 Indian Knowledge System (IKS) </span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub1IKS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1499,24 +1497,24 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub-ip">
+  <div id="notes-view-it-sub-pc"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Imperative Programming</span>
+                <span>Programming with C</span>
             </div>
-            <h1>Imperative Programming Notes</h1>
-            <p>Notes and question bank for Imperative Programming, BSC-IT Semester-1.</p>
+            <h1>Programming with C Notes</h1>
+            <p>Notes and question bank for Programming with C, BSC-IT Semester-1.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Imperative Programming Notes</h2>
+                        <h2>Programming with C Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1526,22 +1524,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> IP QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-pc-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> IP Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Programming with C Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> IP Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -1549,24 +1539,66 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub-de">
+   <div id="notes-view-it-sub-dbms" style="display: none;">
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
+            <span>Database Management System (DBMS)</span>
+        </div>
+        <h1>Database Management System (DBMS)</h1>
+        <p>Notes and question bank for Database Management System (DBMS), BSC-IT Semester-1.</p>
+    </div>
+
+    <section class="table-section">
+        <div class="container">
+            <div class="table-card">
+                <div class="table-card-head centered">
+                    <h2>DBMS Notes</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-no">No</th>
+                            <th>Notes Name</th>
+                            <th class="col-action">Action</th>
+                        </tr>
+                    </thead>
+                    <!-- ID update kar di gayi hai -->
+                    <tbody id="table-dbms-notes">
+					
+                        <tr>
+                            <td class="col-no">1</td>
+                            <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes</span></td>
+                            <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <div id="notes-view-it-sub-cs"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Digital Electronics</span>
+                <span>Communication Skill</span>
             </div>
-            <h1>Digital Electronics Notes</h1>
-            <p>Notes and question bank for Digital Electronics, BSC-IT Semester-1.</p>
+            <h1>Communication Skill Notes</h1>
+            <p>Notes and question bank for Communication Skill, BSC-IT Semester-1.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Digital Electronics Notes</h2>
+                        <h2>Communication Skill Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1576,22 +1608,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DE QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-cs-notes">
+                            
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DE Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Communication Skill Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DE Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -1599,24 +1623,24 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub-os">
+    <div id="notes-view-it-sub-ss"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Operating Systems</span>
+                <span>Soft Skill</span>
             </div>
-            <h1>Operating Systems Notes</h1>
-            <p>Notes and question bank for Operating Systems, BSC-IT Semester-1.</p>
+            <h1>Soft Skill Notes</h1>
+            <p>Notes and question bank for Soft Skill, BSC-IT Semester-1.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Operating Systems Notes</h2>
+                        <h2>Soft Skill Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1626,22 +1650,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OS QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-ss-notes">
+                            
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OS Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Soft Skill Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OS Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -1649,24 +1665,24 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub-dm">
+    <div id="notes-view-it-sub-iks"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Discrete Mathematics</span>
+                <span> Indian Knowledge System</span>
             </div>
-            <h1>Discrete Mathematics Notes</h1>
-            <p>Notes and question bank for Discrete Mathematics, BSC-IT Semester-1.</p>
+            <h1> Indian Knowledge System Notes</h1>
+            <p>Notes and question bank for Indian Knowledge System, BSC-IT Semester-1.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Discrete Mathematics Notes</h2>
+                        <h2> Indian Knowledge System Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1676,68 +1692,10 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DM QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DM Notes-1</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-iks-notes">     
                             <tr>
                                 <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DM Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="notes-view-it-sub-cs">
-        <div class="container page-head">
-            <div class="breadcrumb">
-                <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesITSub(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Communication Skills</span>
-            </div>
-            <h1>Communication Skills Notes</h1>
-            <p>Notes and question bank for Communication Skills, BSC-IT Semester-1.</p>
-        </div>
-
-        <section class="table-section">
-            <div class="container">
-                <div class="table-card">
-                    <div class="table-card-head centered">
-                        <h2>Communication Skills Notes</h2>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="col-no">No</th>
-                                <th>Notes Name</th>
-                                <th class="col-action">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CS QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
-                            <tbody id="table-cs-notes">
-                             </tbody>
-                                
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CS Notes-2</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span>  Indian Knowledge System Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                         </tbody>
@@ -1755,7 +1713,7 @@ body.dark-theme .search-go-btn {
                 <span>Semester-2</span>
             </div>
             <h1>BSC-IT Semester-2 Subjects</h1>
-            <p>Subject-wise notes for Mumbai University BSc Information Technology, Semester-2.</p>
+            <p>Subject-wise notes for Mumbai University BSc Information Technology, Semester-2.Subject-wise notes for Mumbai University BSc Information Technology, Semester-2.</p>
         </div>
 
         <section class="table-section">
@@ -1772,7 +1730,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="notes-table-it">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Object Oriented Programming</span></td>
@@ -1780,18 +1738,18 @@ body.dark-theme .search-go-btn {
                             </tr>
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #2 Microprocessor Architecture</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2MA(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #2Operating System </span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2OS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #3 Web Programming</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2WP(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #3 Web Designing</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2WD(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">4</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #4 Numerical and Statistical Methods</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2NSM(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #4 PL/SQL</span></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub2PLSQL(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">5</td>
@@ -1832,22 +1790,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OOP QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-oop-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OOP Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OOP Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -1855,49 +1805,41 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub2-ma">
-        <div class="container page-head">
-            <div class="breadcrumb">
-                <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
-                <a onclick="showNotesITSub2(); return false;">Semester-2</a> <i class="fas fa-chevron-right"></i>
-                <span>Microprocessor Architecture</span>
-            </div>
-            <h1>Microprocessor Architecture Notes</h1>
-            <p>Notes and question bank for Microprocessor Architecture, BSC-IT Semester-2.</p>
+    <div id="notes-view-it-sub2-os" style="display: none;">
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="showNotesITSub2(); return false;">Semester-2</a> <i class="fas fa-chevron-right"></i>
+            <span>Operating System</span>
         </div>
+        <h1>Operating System Notes</h1>
+        <p>Notes and question bank for Operating System, BSC-IT Semester-2.</p>
+    </div>
 
-        <section class="table-section">
-            <div class="container">
-                <div class="table-card">
-                    <div class="table-card-head centered">
-                        <h2>Microprocessor Architecture Notes</h2>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="col-no">No</th>
-                                <th>Notes Name</th>
-                                <th class="col-action">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+    <section class="table-section">
+        <div class="container">
+            <div class="table-card">
+                <div class="table-card-head centered">
+                    <h2>Operating System Notes</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-no">No</th>
+                            <th>Notes Name</th>
+                            <th class="col-action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-os-notes">
+                            
                             <tr>
                                 <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> MA QB</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> OS Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> MA Notes-1</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> MA Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -1905,24 +1847,24 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub2-wp">
+    <div id="notes-view-it-sub2-wd"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub2(); return false;">Semester-2</a> <i class="fas fa-chevron-right"></i>
-                <span>Web Programming</span>
+                <span>Web Designing</span>
             </div>
             <h1>Web Programming Notes</h1>
-            <p>Notes and question bank for Web Programming, BSC-IT Semester-2.</p>
+            <p>Notes and question bank for Web Designing, BSC-IT Semester-2.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Web Programming Notes</h2>
+                        <h2>Web Designing Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1932,22 +1874,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> WP QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                       <tbody id="table-wd-notes">
+                            
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> WP Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> WD Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> WP Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -1955,24 +1889,24 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 
-    <div id="notes-view-it-sub2-nsm">
+    <div id="notes-view-it-sub2-plsql"style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesITSub2(); return false;">Semester-2</a> <i class="fas fa-chevron-right"></i>
-                <span>Numerical and Statistical Methods</span>
+                <span>PL/SQL</span>
             </div>
-            <h1>Numerical and Statistical Methods Notes</h1>
-            <p>Notes and question bank for Numerical and Statistical Methods, BSC-IT Semester-2.</p>
+            <h1>PL/SQL Notes</h1>
+            <p>Notes and question bank for PL/SQL, BSC-IT Semester-2.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Numerical and Statistical Methods Notes</h2>
+                        <h2>PL/SQL Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -1982,22 +1916,14 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> NSM QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-plsql-notes">
+                            
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> NSM Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> PL/SQL Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> NSM Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -3788,7 +3714,7 @@ body.dark-theme .search-go-btn {
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-4</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr> -->
-                            <tr>
+                       <!--     <tr>
                                 <td class="col-no">5</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-5</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
@@ -3797,7 +3723,7 @@ body.dark-theme .search-go-btn {
                                 <td class="col-no">6</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-6</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -3830,7 +3756,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody id="syl-table-cs">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
@@ -3893,7 +3819,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody id="syl-table-ds">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
@@ -3956,7 +3882,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="res-table-it">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
@@ -4019,7 +3945,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody id="res-table-cs">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
@@ -4082,7 +4008,7 @@ body.dark-theme .search-go-btn {
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <<tbody id="res-table-ds">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
@@ -7747,124 +7673,64 @@ body.dark-theme .search-go-btn {
         </section>
     </div>
 	<!-- ✅ FRESH DYNAMIC THEME SIGN UP VIEW -->
-    <div id="signup-view" style="display: none; padding: 40px 0 80px 0;">
-        <div class="container" style="max-width: 500px; margin: 0 auto;">
-            
-            <!-- Header section -->
-            <div style="margin-bottom: 30px; text-align: left;">
-                
-                <!-- Rounded Box Breadcrumb -->
-                <div style="background-color: var(--card-bg); display: inline-block; padding: 10px 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
-                    <a onclick="window.showHome(); return false;" style="color: var(--brand-color); cursor: pointer; font-weight: 700; text-decoration: none; font-size: 14px;">Home</a> 
-                    <span style="color: var(--main-text); opacity: 0.7; font-size: 14px; font-weight: 700; margin-left: 15px;">Sign Up</span>
-                </div>
-                
-                <!-- Dynamic Heading -->
-                <h1 style="color: var(--brand-color); font-size: 38px; font-weight: 900; margin-bottom: 8px;">Join Nepid</h1>
-                <p style="color: #64748b; font-size: 15px;">Create a free account to access MU study materials and resources.</p>
-            </div>
-
-            <!-- Dynamic Theme Card Box -->
-            <div style="background-color: var(--card-bg); padding: 35px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid var(--border-color);">
-                <form onsubmit="event.preventDefault(); window.handleSignUp();">
-                    
-                    <!-- Full Name -->
-                  <!-- ✅ CORRECTED SIGN UP FORM -->
-<form id="signUpForm">
-    <!-- Full Name -->
-    <div style="margin-bottom: 20px; text-align: left;">
-        <label style="display: block; margin-bottom: 8px; font-weight: 700; color: var(--main-text); font-size: 14px;">Full Name</label>
-        <input type="text" id="signupName" placeholder="Enter your full name" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--input-bg); color: var(--main-text); font-size: 14px;">
-    </div>
-
-    <!-- Email Address -->
-    <div style="margin-bottom: 20px; text-align: left;">
-        <label style="display: block; margin-bottom: 8px; font-weight: 700; color: var(--main-text); font-size: 14px;">Email Address</label>
-        <input type="email" id="signupEmail" placeholder="Enter your email" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--input-bg); color: var(--main-text); font-size: 14px;">
-    </div>
-
-    <!-- Class with Dropdown -->
-    <div style="margin-bottom: 20px; text-align: left;">
-        <label style="display: block; margin-bottom: 8px; font-weight: 700; color: var(--main-text); font-size: 14px;">Class</label>
-        <input type="text" id="signupClass" list="class-options" placeholder="Select or type your Class" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--input-bg); color: var(--main-text); font-size: 14px;">
-        <datalist id="class-options">
-            <option value="BSC-IT"></option>
-            <option value="BSC-CS"></option>
-            <option value="BSC-DS"></option>
-        </datalist>
-    </div>
-
-    <!-- Password -->
-    <div style="margin-bottom: 25px; text-align: left;">
-        <label style="display: block; margin-bottom: 8px; font-weight: 700; color: var(--main-text); font-size: 14px;">Password</label>
-        <input type="password" id="signupPassword" placeholder="Create a password" required style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--input-bg); color: var(--main-text); font-size: 14px;">
-    </div>
-
-    <!-- 🟢 YAHAN FIX KIYA HAI: type="button" aur onclick add kiya gaya hai -->
-    <button type="button" onclick="window.handleSignUp()" style="width: 100%; padding: 14px; background-color: var(--brand-color); color: #ffffff; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s;">Sign Up</button>
-    
-    <p id="signupStatus" style="text-align: center; margin-top: 15px; font-weight: bold; font-size: 14px;"></p>
-
-    <!-- Login Link -->
-    <div style="text-align: center; margin-top: 20px;">
-        <span style="color: #64748b; font-size: 13px;">Already have an account?</span>
-        <a href="#" onclick="window.showLogin(); return false;" style="color: var(--brand-color); font-weight: 700; text-decoration: none; font-size: 13px; margin-left: 5px;">Login</a>
-    </div>
-</form>
-            </div>
-
-        </div>
-    </div>
-        </section>
-    </div>
-	<div id="login-view" style="display: none;">
+   <!-- ============================================ -->
+    <!-- SIGNUP VIEW (EMAIL OTP VERIFICATION)         -->
+    <!-- ============================================ -->
+    <div id="signup-view" style="display: none;">
         <div class="container page-head">
-            <div class="breadcrumb">
-                <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
-                <span>Login</span>
-            </div>
-            <h1>Welcome Back!</h1>
-            <p>Login to your Nepid account to access your saved notes and resources.</p>
+            <div class="breadcrumb"><a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i><span>Sign Up</span></div>
+            <h1>Join Nepid</h1>
+            <p>Create a free account to access MU study materials and resources.</p>
         </div>
-
         <section class="table-section">
             <div class="container" style="max-width: 500px; margin: 0 auto;">
                 <div class="table-card" style="padding: 40px;">
-                    <div class="section-header" style="margin-bottom: 30px; text-align: left;">
-                        <h2 style="font-size: 24px;">Login</h2>
-                    </div>
-                    <form onsubmit="event.preventDefault(); alert('Login Successful! Welcome back.'); showHome();">
+                    <div class="section-header" style="margin-bottom: 30px; text-align: left;"><h2 style="font-size: 24px;">Create Account</h2></div>
+                    
+                    <!-- STEP 1: EMAIL FORM -->
+                    <form id="phoneForm" onsubmit="event.preventDefault(); window.sendOTP();">
                         <div style="margin-bottom: 20px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Email Address</label>
-                            <input type="email" placeholder="Enter your email" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; font-family: inherit;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: transparent; color: var(--text-main);">
                         </div>
-    
-                        <!-- Password Field -->
-                        <div style="margin-bottom: 30px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Password</label>
-                            <div class="password-container">
-                                <input type="password" id="loginPassword" placeholder="Enter password" required style="width: 100%; padding: 12px 40px 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; font-family: inherit; background-color: transparent; color: var(--text-main);">
-                                <i class="fas fa-eye password-toggle-icon" onclick="togglePassword('loginPassword', this)"></i>
-                            </div>
-                        </div>
-
-                        <!-- ✅ FORGOT PASSWORD LINK YAHAN AAYEGA ✅ -->
-                        <div style="text-align: right; margin-top: -15px; margin-bottom: 25px;">
-                            <a href="#" onclick="window.showForgotPassword(); return false;" style="color: var(--brand-color); font-size: 13px; font-weight: 600; text-decoration: none;">Forgot Password?</a>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Class</label>
+                            <input type="text" id="signupClass" list="class-options" placeholder="Select or type your Class" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: transparent; color: var(--text-main);">
+                            <datalist id="class-options"><option value="BSC-IT"></option><option value="BSC-CS"></option><option value="BSC-DS"></option></datalist>
                         </div>
                         
-                        <!-- Iske theek niche aapka Login submit button hona chahiye -->
-                          
-                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px;">Login</button>
+                        <!-- YAHAN MAIN CHANGE HUA HAI: Phone se Email ho gaya -->
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Email Address</label>
+                            <input type="email" id="signupPhone" placeholder="student@example.com" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: transparent; color: var(--text-main);">
+                        </div>
+						
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px;">Send OTP to Email</button>
                     </form>
-                   <p style="text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-muted);">
-                      Already have an account? <a href="#" onclick="showLogin(); return false;" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Login</a>
-                             </p>
+
+                    <!-- STEP 2: OTP VERIFICATION FORM (Pehle hide rahega) -->
+                    <form id="otpForm" style="display: none;" onsubmit="event.preventDefault(); window.verifyOTP();">
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Enter 6-Digit Email OTP</label>
+                            <input type="text" id="signupOTP" placeholder="Enter OTP sent to your Email" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: transparent; color: var(--text-main); letter-spacing: 2px; text-align: center; font-size: 18px;">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; background-color: #10b981;">Verify & Create Account</button>
+                    </form>
+
+                    <!-- Status Message -->
+                    <p id="signupStatus" style="text-align: center; margin-top: 15px; font-weight: bold;"></p>
+
+                   
                 </div>
             </div>
         </section>
     </div>
-	<div id="forgot-password-view" style="display: none;">
+	
+    <!-- ============================================ -->
+    <!-- FORGOT PASSWORD VIEW                         -->
+    <!-- ============================================ -->
+    <div id="forgot-password-view" style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
@@ -7875,23 +7741,7 @@ body.dark-theme .search-go-btn {
             <p>Enter your registered email address and we'll send you a link to reset your password.</p>
         </div>
 
-        <section class="table-section">
-            <div class="container" style="max-width: 500px; margin: 0 auto;">
-                <div class="table-card" style="padding: 40px;">
-                    <div class="section-header" style="margin-bottom: 30px; text-align: left;">
-                        <h2 style="font-size: 24px;">Forgot Password</h2>
-                    </div>
-                    <form onsubmit="event.preventDefault(); alert('If an account exists, a reset link has been sent to your email.'); showLogin();">
-                        <div style="margin-bottom: 30px;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Email Address</label>
-                            <input type="email" placeholder="Enter your registered email" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; font-family: inherit;">
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px;">Send Reset Link</button>
-                    </form>
-                    <p style="text-align: center; margin-top: 25px; font-size: 14px; color: var(--text-muted);">
-                        Remember your password? <a href="#" onclick="showLogin(); return false;" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Back to Login</a>
-                    </p>
-                </div>
+       
             </div>
         </section>
     </div>
@@ -8070,7 +7920,7 @@ body.dark-theme .search-go-btn {
                 <form id="adminLoginForm" onsubmit="handleAdminLogin(event)">
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Admin Email Address</label>
-                        <input type="email" id="adminEmail" placeholder="admin@nepid.in" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; font-family: inherit;">
+                        <input type="email" id="adminEmail" placeholder="Enter admin email " required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; font-family: inherit;">
                     </div>
                     <div style="margin-bottom: 30px;">
                         <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Password</label>
@@ -8078,9 +7928,7 @@ body.dark-theme .search-go-btn {
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; background-color: var(--secondary-color); border-color: var(--secondary-color);">Login as Admin</button>
                 </form>
-                <p style="text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-muted);">
-                     <a href="#" onclick="showLogin(); return false;" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Student Login</a>
-                </p>
+                
             </div>
         </div>
     </section>
@@ -8249,14 +8097,6 @@ body.dark-theme .search-go-btn {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mainNav.classList.remove('nav-open');
         }
-
-        function showITSub1IP() {
-            hideAllViews();
-            document.getElementById('notes-view-it-sub-ip').style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            mainNav.classList.remove('nav-open');
-        }
-
         function showITSub1DE() {
             hideAllViews();
             document.getElementById('notes-view-it-sub-de').style.display = 'block';
@@ -8283,33 +8123,37 @@ body.dark-theme .search-go-btn {
     document.getElementById('notes-view-it-sub-cs').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
     mainNav.classList.remove('nav-open');
-    
-    // Ye line database se Notes fetch karke table me daal degi
-    loadNotesForSubject("BSC-IT", "Semester 1", "Communication Skills", "table-cs-notes");
+    }
+	
+	function showNotesITSub2() {
+    hideAllViews(); 
+    document.getElementById('notes-view-it-sub2').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
 }
-
-        function showNotesITSub2() {
-            hideAllViews();
-            document.getElementById('notes-view-it-sub2').style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            mainNav.classList.remove('nav-open');
-        }
-
-        function showITSub2OOP() {
+	
+	function showITSub2OOP() {    <!-- kingring -->
             hideAllViews();
             document.getElementById('notes-view-it-sub2-oop').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mainNav.classList.remove('nav-open');
         }
 
-        function showITSub2MA() {
-            hideAllViews();
-            document.getElementById('notes-view-it-sub2-ma').style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            mainNav.classList.remove('nav-open');
-        }
+            function showITSub2OS() {
+        hideAllViews();
+       document.getElementById('notes-view-it-sub-os').style.display = 'block';
+       window.scrollTo({ top: 0, behavior: 'smooth' });
+       if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
 
-        function showITSub2WP() {
+       if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Operating System", "table-os-notes");
+    }
+}
+
+	     function showITSub2WP() {
             hideAllViews();
             document.getElementById('notes-view-it-sub2-wp').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -9113,6 +8957,166 @@ body.dark-theme .search-go-btn {
         loadCategoryData("syllabus", "BSC-IT", "ALL", "syl-table-it"); 
     }
 }
+   function showSylCS() {
+    hideAllViews();
+    document.getElementById('syl-view-cs').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    // Ye line database se Syllabus layegi
+    if (window.loadCategoryData) {
+        // "ALL" isliye likha hai taaki saare semesters ek hi page par list ho jayein
+        loadCategoryData("syllabus", "BSC-CS", "ALL", "syl-table-cs"); 
+    }
+}
+ function showSylDS() {
+    hideAllViews();
+    document.getElementById('syl-view-ds').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    // Ye line database se Syllabus layegi
+    if (window.loadCategoryData) {
+        // "ALL" isliye likha hai taaki saare semesters ek hi page par list ho jayein
+        loadCategoryData("syllabus", "BSC-DS", "ALL", "syl-table-ds"); 
+    }
+}
+    function showResDS() {
+    hideAllViews();
+    document.getElementById('res-view-ds').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        loadCategoryData("mu_result", "BSC-DS", "ALL", "res-table-ds"); 
+    }
+}
+ function showResCS() {
+    hideAllViews();
+    document.getElementById('res-view-cs').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        loadCategoryData("mu_result", "BSC-CS", "ALL", "res-table-cs"); 
+    }
+}
+ function showResIT() {
+    hideAllViews();
+    document.getElementById('res-view-it').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+	
+
+   if (window.loadCategoryData) {
+        loadCategoryData("mu_result", "BSC-IT", "ALL", "res-table-it"); 
+    }
+ }
+function showITSub1DBMS() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub-dbms').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Database Management System (DBMS)", "table-dbms-notes"); 
+    }
+}
+function showITSub1CS() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub-cs').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Communication Skill", "table-cs-notes"); 
+    }
+}
+function showITSub1SS() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub-ss').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Soft Skill", "table-ss-notes"); 
+    }
+}
+function showITSub1IKS() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub-iks').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Indian Knowledge System", "table-iks-notes"); 
+    }
+}
+function showITSub1PC() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub-pc').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Yahan exact Firebase wala naam pass kiya gaya hai (with brackets)
+        loadCategoryData("notes", "BSC-IT", "Programming with C", "table-pc-notes"); 
+    }
+}
+   
+ function showITSub2WD() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub2-wd').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Web Designing", "table-wd-notes");
+    }
+}
+function showITSub2OOP() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub2-oop').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Object Oriented Programming", "table-oop-notes");
+    }
+}
+function showITSub2OS() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub2-os').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Operating System", "table-os-notes");
+    }
+}
+ function showITSub2PLSQL() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub2-plsql').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "PL/SQL", "table-plsql-notes");
+    }
+}
+	
 		
     </script> <!-- bing -->
 	
@@ -9122,8 +9126,8 @@ body.dark-theme .search-go-btn {
 <script type="module">
     // 1. Single & Clean Firebase Imports (Version 10.8.1)
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getFirestore, collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
-    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, query, where, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+    import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, RecaptchaVerifier, signInWithPhoneNumber } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
     // 2. Aapki Firebase Configuration
     const firebaseConfig = {
@@ -9149,51 +9153,104 @@ body.dark-theme .search-go-btn {
     window.addDoc = addDoc;
     window.getDocs = getDocs;
 
-    // ==========================================
-    // 🚀 AUTHENTICATION FUNCTIONS
-    // ==========================================
+    let confirmationResult = null;
+    let isOtpSent = false;
 
-    // 1. Sign Up Function (Firestore + Firebase Auth)
-    window.handleSignUp = async function() {
-        const fullName = document.getElementById('signupName').value;
-        const email = document.getElementById('signupEmail').value;
-        const className = document.getElementById('signupClass').value;
-        const password = document.getElementById('signupPassword').value;
-        const statusText = document.getElementById('signupStatus');
-
-        if (!fullName || !email || !className || !password) {
-            if(statusText) { statusText.innerText = "Saari details bharna zaroori hai!"; statusText.style.color = "#f43f5e"; }
-            return;
+    
+        
+        const savedName = localStorage.getItem("userName");
+        if (savedName && typeof window.updateAuthButton === "function") {
+            window.updateAuthButton(savedName);
         }
 
-        try {
-            if(statusText) { statusText.innerText = "Creating account... ⏳"; statusText.style.color = "var(--brand-color)"; }
 
-            // User ko Firebase Auth mein banana
-            await createUserWithEmailAndPassword(auth, email, password);
+    // ==========================================
+    // 🚀 AUTHENTICATION FUNCTIONS (Phone OTP Signup)
+    // ==========================================
 
-            // User ki extra details (Name, Class) Database mein save karna
-            await addDoc(collection(db, "users"), {
-                fullName: fullName,
-                email: email,
-                className: className,
-                createdAt: new Date().toISOString()
-            });
+    window.handleSignUp = async function() {
+        const statusText = document.getElementById('signupStatus');
+        const signupBtn = document.querySelector('#signUpForm button');
 
-            // LocalStorage mein naam save karna aur UI update karna
-            localStorage.setItem("userName", fullName);
-            if(typeof window.updateAuthButton === 'function') window.updateAuthButton(fullName);
+        if (!isOtpSent) {
+            // Step A: Send OTP
+            const fullName = document.getElementById('signupName')?.value.trim();
+            const className = document.getElementById('signupClass')?.value.trim();
+            let phone = document.getElementById('signupPhone')?.value.trim();
 
-            if(statusText) { statusText.innerText = "Account Created Successfully! 🎉"; statusText.style.color = "#10b981"; }
-            
-            setTimeout(() => {
-                if(typeof window.showHome === 'function') window.showHome(); 
-                if(statusText) statusText.innerText = "";
-            }, 1500);
+            if (!fullName || !className || !phone) {
+                if(statusText) { statusText.innerText = "Saari details bharna zaroori hai!"; statusText.style.color = "#f43f5e"; }
+                return;
+            }
 
-        } catch (error) {
-            console.error("Signup Error:", error);
-            if(statusText) { statusText.innerText = "Error: " + error.message; statusText.style.color = "#f43f5e"; }
+            if (!phone.startsWith('+')) {
+                phone = '+91' + phone;
+            }
+
+            try {
+                if(statusText) { statusText.innerText = "Sending OTP... ⏳"; statusText.style.color = "var(--brand-color)"; }
+                
+                const appVerifier = window.recaptchaVerifier;
+                confirmationResult = await signInWithPhoneNumber(auth, phone, appVerifier);
+                
+                isOtpSent = true;
+                if(statusText) { statusText.innerText = "OTP sent successfully! Enter 6-digit OTP."; statusText.style.color = "#10b981"; }
+                
+                // Hide phone field, show OTP field
+                const phoneGroup = document.getElementById('phoneInputGroup');
+                const otpGroup = document.getElementById('otpSection');
+                if(phoneGroup) phoneGroup.style.display = 'none';
+                if(otpGroup) otpGroup.style.display = 'block';
+                if(signupBtn) signupBtn.innerText = "Verify & Register";
+
+            } catch (error) {
+                console.error("OTP Error:", error);
+                if(statusText) { statusText.innerText = "Error: " + error.message; statusText.style.color = "#f43f5e"; }
+                if (window.recaptchaVerifier) {
+                    window.recaptchaVerifier.render().then(widgetId => grecaptcha.reset(widgetId));
+                }
+            }
+        } else {
+            // Step B: Verify OTP & Save to Firestore
+            const otp = document.getElementById('signupOtp')?.value.trim();
+            const fullName = document.getElementById('signupName')?.value.trim();
+            const className = document.getElementById('signupClass')?.value.trim();
+            let phone = document.getElementById('signupPhone')?.value.trim();
+            if (!phone.startsWith('+')) phone = '+91' + phone;
+
+            if (!otp || otp.length < 6) {
+                if(statusText) { statusText.innerText = "Please enter a valid 6-digit OTP.!"; statusText.style.color = "#f43f5e"; }
+                return;
+            }
+
+            try {
+                if(statusText) { statusText.innerText = "Verifying OTP... ⏳"; statusText.style.color = "var(--brand-color)"; }
+
+                const result = await confirmationResult.confirm(otp);
+                const user = result.user;
+
+                // Save user details to Firestore using setDoc with user.uid
+                await setDoc(doc(db, "users", user.uid), {
+                    fullName: fullName,
+                    className: className,
+                    phoneNumber: user.phoneNumber || phone,
+                    createdAt: new Date().toISOString()
+                });
+
+                localStorage.setItem("userName", fullName);
+                if(typeof window.updateAuthButton === 'function') window.updateAuthButton(fullName);
+
+                if(statusText) { statusText.innerText = "Registration Successful! 🎉"; statusText.style.color = "#10b981"; }
+                
+                setTimeout(() => {
+                    if(typeof window.showHome === 'function') window.showHome(); 
+                    else window.location.href = "index.html";
+                }, 1500);
+
+            } catch (error) {
+                console.error("Verification Error:", error);
+                if(statusText) { statusText.innerText = "Galat OTP! Kripya dobara try karein."; statusText.style.color = "#f43f5e"; }
+            }
         }
     };
 
@@ -9210,7 +9267,6 @@ body.dark-theme .search-go-btn {
             
             await signInWithEmailAndPassword(auth, email, password);
             
-            // Name save karna
             const userName = email.split('@')[0];
             localStorage.setItem("userName", userName);
             if(typeof window.updateAuthButton === 'function') window.updateAuthButton(userName);
@@ -9293,12 +9349,10 @@ body.dark-theme .search-go-btn {
         });
     };
 
-
     // ==========================================
     // 📂 DATABASE FUNCTIONS (Notes, Search, Upload)
     // ==========================================
 
-    // Admin Upload Function
     window.handleUploadContent = function(event) {
         if(event) event.preventDefault();
 
@@ -9338,75 +9392,89 @@ body.dark-theme .search-go-btn {
         });
     };
 
-    // Load Data Function
-    window.loadCategoryData = async function(category, courseName, semName, tableBodyId) {
-        const tbody = document.getElementById(tableBodyId);
-        if (!tbody) return;
+   window.loadCategoryData = async function(category, courseName, subjectName, tableBodyId) {
+    const tbody = document.getElementById(tableBodyId);
+    if (!tbody) return;
 
-        tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">Loading data from database...</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">Loading data from database...</td></tr>';
 
-        const collectionName = "uploaded_" + category;
-        let q;
+    // Dhyan dein: Agar aapka collection name sirf "notes" hai, toh is line ko badal kar
+    // const collectionName = category; kar dein.
+    const collectionName = "uploaded_" + category; 
+    let q;
 
-        if (semName === "ALL") {
-            q = query(collection(db, collectionName), where("course", "in", [courseName, "ALL"]));
-        } else {
-            q = query(collection(db, collectionName), where("course", "in", [courseName, "ALL"]), where("semester", "in", [semName, "ALL"]));
+    if (subjectName === "ALL") {
+        q = query(collection(db, collectionName), where("course", "in", [courseName, "ALL"]));
+    } else {
+        // Yahan "semester" ki jagah "subject" field check kar rahe hain
+        q = query(collection(db, collectionName), 
+            where("course", "in", [courseName, "ALL"]), 
+            where("subject", "==", subjectName)
+        );
+    }
+
+    try {
+        const querySnapshot = await getDocs(q);
+        if (querySnapshot.empty) {
+            tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">No entries uploaded yet.</td></tr>';
+            return;
         }
 
-        try {
-            const querySnapshot = await getDocs(q);
-            if (querySnapshot.empty) {
-                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">No entries uploaded yet.</td></tr>';
-                return;
+        let docsArray = [];
+        querySnapshot.forEach((doc) => {
+            docsArray.push(doc.data());
+        });
+
+        // Data ko Title ke hisaab se sort karna (e.g., IP Notes-1, IP Notes-2)
+        docsArray.sort((a, b) => {
+            if (a.title < b.title) return -1;
+            if (a.title > b.title) return 1;
+            return 0;
+        });
+
+        let html = '';
+        let count = 1;
+        
+        docsArray.forEach((item) => {
+            let buttonText = "Open Link";
+            let iconClass = "fas fa-file-pdf";
+
+            if(category === "syllabus") {
+                buttonText = "Open Syllabus";
+                iconClass = "fas fa-book"; 
+            } else if(category === "notes") {
+                buttonText = "Open Note";
+            } else if(category === "question_paper") {
+                buttonText = "Open Paper";
+            } else if(category === "mu_result") {
+                buttonText = "Open Result";
             }
 
-            let docsArray = [];
-            querySnapshot.forEach((doc) => { docsArray.push(doc.data()); });
+            html += `
+            <tr>
+                <td class="col-no">${count}</td>
+                <td>
+                    <span class="sem-name">
+                        <!-- Yahan style apply karke direct Red icon banaya gaya hai -->
+                        <span class="folder-icon" style="background-color: rgba(244, 63, 94, 0.12); color: #dc2626;">
+                            <i class="${iconClass}"></i>
+                        </span> 
+                        ${item.title} 
+                    </span>
+                </td>
+                <td class="col-action">
+                    <a href="${item.link}" target="_blank" class="btn-open">${buttonText} <i class="fas fa-external-link-alt"></i></a>
+                </td>
+            </tr>`;
+            count++;
+        });
+        tbody.innerHTML = html;
+    } catch (error) {
+        console.error("Error loading data:", error);
+        tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:red;">Error loading content.</td></tr>';
+    }
+};
 
-            docsArray.sort((a, b) => {
-                if (a.semester < b.semester) return -1;
-                if (a.semester > b.semester) return 1;
-                return 0;
-            });
-
-            let html = '';
-            let count = 1;
-            
-            docsArray.forEach((item) => {
-                let buttonText = "Open Link";
-                let iconClass = "fas fa-file-pdf";
-
-                if(category === "syllabus") { buttonText = "Open Syllabus"; iconClass = "fas fa-book"; } 
-                else if(category === "notes") { buttonText = "Open Note"; } 
-                else if(category === "question_paper") { buttonText = "Open Paper"; } 
-                else if(category === "mu_result") { buttonText = "Open Result"; }
-
-                html += `
-                <tr>
-                    <td class="col-no">${count}</td>
-                    <td>
-                        <span class="sem-name">
-                            <span class="folder-icon" style="background-color: rgba(244, 63, 94, 0.12); color: #dc2626;">
-                                <i class="${iconClass}"></i>
-                            </span> 
-                            ${item.title} 
-                        </span>
-                    </td>
-                    <td class="col-action">
-                        <a href="${item.link}" target="_blank" class="btn-open">${buttonText} <i class="fas fa-external-link-alt"></i></a>
-                    </td>
-                </tr>`;
-                count++;
-            });
-            tbody.innerHTML = html;
-        } catch (error) {
-            console.error("Error loading data:", error);
-            tbody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:red;">Error loading content.</td></tr>';
-        }
-    };
-
-    // Global Search Function
     window.executeSearch = async function() {
         let input = document.getElementById("globalSearchInput").value.trim().toLowerCase();
         
@@ -9431,7 +9499,6 @@ body.dark-theme .search-go-btn {
             let resultsHTML = '';
             let count = 0;
 
-            // Search in Notes
             const notesSnap = await getDocs(query(collection(db, "uploaded_notes")));
             notesSnap.forEach((doc) => {
                 let data = doc.data();
@@ -9449,7 +9516,6 @@ body.dark-theme .search-go-btn {
                 }
             });
 
-            // Search in Syllabus
             const sylSnap = await getDocs(query(collection(db, "uploaded_syllabus")));
             sylSnap.forEach((doc) => {
                 let data = doc.data();
@@ -9479,10 +9545,6 @@ body.dark-theme .search-go-btn {
         }
     };
 
-
-    // ==========================================
-    // 🎨 UI PERSISTENCE FUNCTION
-    // ==========================================
     window.updateAuthButton = function(name) {
         const authBtn = document.getElementById('authButton');
         if (authBtn && name) {
@@ -9509,25 +9571,150 @@ body.dark-theme .search-go-btn {
             authBtn.onclick = function(event) {
                 event.preventDefault();
                 if(typeof window.toggleDropdown === 'function') window.toggleDropdown();
-                else window.handleLogout(); // Fallback agar dropdown nahi hai
+                else window.handleLogout();
             };
         }
     };
+	// ==========================================
+        // 100% FREE EMAIL OTP SYSTEM (EMAILJS)
+        // ==========================================
+        
+        // 1. Apni EmailJS ki Public Key yahan daalein 👇
+        emailjs.init("pKwWKfMJ_6Tpzu9mD"); 
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const savedName = localStorage.getItem("userName");
-        if (savedName && typeof window.updateAuthButton === "function") {
-            window.updateAuthButton(savedName);
+        window.sendOTP = function() {
+            // HTML ka id "signupPhone" hi hai, par hum isme email le rahe hain
+            const email = document.getElementById('signupPhone').value.trim(); 
+            const status = document.getElementById('signupStatus');
+            const name = document.getElementById('signupName').value.trim();
+
+            if(!email || !email.includes('@')) {
+                status.innerText = "Please enter a valid Email Address.";
+                status.style.color = "red";
+                return;
+            }
+
+            status.innerText = "Sending OTP to your Email... ⏳";
+            status.style.color = "var(--brand-color)";
+            
+            // 6-digit random OTP
+            window.generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+
+            const templateParams = {
+                to_email: email,
+                to_name: name || "Student",
+                otp: window.generatedOTP
+            };
+
+            // 2. Apni Service ID aur Template ID Yahan daalein 👇
+           emailjs.send('service_4z4fiok', 'template_m7n5kus', templateParams)
+                .then(function() {
+                    status.innerText = "OTP Sent to your Email! 📩 Check inbox.";
+                    status.style.color = "#10b981";
+                    document.getElementById('phoneForm').style.display = 'none';
+                    document.getElementById('otpForm').style.display = 'block';
+                }, function(error) {
+                    console.error("EmailJS Error:", error);
+                    status.innerText = "Error sending Email! Try again.";
+                    status.style.color = "red";
+                });
+        };
+
+      window.verifyOTP = async function() {
+            const otp = document.getElementById('signupOTP').value.trim();
+            const status = document.getElementById('signupStatus');
+            const name = document.getElementById('signupName').value;
+            const className = document.getElementById('signupClass').value;
+            const email = document.getElementById('signupPhone').value.trim();
+
+            status.innerText = "Verifying OTP... ⏳";
+            status.style.color = "var(--brand-color)";
+            
+            if(otp === window.generatedOTP && otp !== "") {
+                try {
+                    // Seedha Firestore ka setDoc use karein (Bina window check ke)
+                    await setDoc(doc(db, "students", email), {
+                        fullName: name,
+                        email: email,
+                        studentClass: className,
+                        joinedAt: new Date().toISOString()
+                    });
+
+                    status.innerText = "Account Created Successfully! 🎉";
+                    status.style.color = "#10b981";
+                    
+                    localStorage.setItem("userName", name);
+                    if(typeof window.updateAuthButton === 'function') window.updateAuthButton(name);
+
+                    setTimeout(() => {
+                        if(typeof window.showHome === 'function') window.showHome();
+                        document.getElementById('phoneForm').style.display = 'block';
+                        document.getElementById('otpForm').style.display = 'none';
+                        document.getElementById('signupName').value = "";
+                        document.getElementById('signupPhone').value = ""; 
+                        document.getElementById('signupClass').value = "";
+                        document.getElementById('signupOTP').value = "";
+                        status.innerText = "";
+                    }, 1500);
+
+                } catch (error) {
+                    console.error("Database Error Detail:", error);
+                    status.innerText = "DB Error: Please check console.";
+                    status.style.color = "red";
+                }
+            } else {
+                status.innerText = "Invalid OTP! Kripya sahi OTP daalein.";
+                status.style.color = "red";
+            }
+        };
+		// Login Page dikhane ka function
+        window.showLogin = function() {
+            console.log("showLogin function call hua!"); // Debugging ke liye
+
+            // 1. Baaki saare views chhupa do (Admin view bhi)
+            const homeView = document.getElementById('home-view');
+            const signupView = document.getElementById('signup-view');
+            const forgotPasswordView = document.getElementById('forgot-password-view');
+            
+            // YAHAN ADMIN VIEW KO CHHUPANE KI LINE JODI HAI 👇
+            const adminView = document.getElementById('admin-view'); // Apne admin div ka ID yahan daalein
+            
+            if (homeView) homeView.style.display = 'none';
+            if (signupView) signupView.style.display = 'none';
+            if (forgotPasswordView) forgotPasswordView.style.display = 'none';
+            
+            // YAHAN ADMIN VIEW CHHUP RAHA HAI 👇
+            if (adminView) adminView.style.display = 'none'; 
+
+            // 2. Sirf login view dikhao
+            const loginView = document.getElementById('login-view');
+            if (loginView) {
+                loginView.style.display = 'block';
+            } else {
+                console.error("login-view div nahi mila!");
+            }
+        };
+// Signup page ke eye icon ke liye
+    window.togglePasswordVisibility = function() {
+        const passInput = document.getElementById("signupPassword");
+        const eyeIcon = document.getElementById("togglePasswordIcon");
+        
+        if(passInput && eyeIcon) {
+            if (passInput.type === "password") {
+                passInput.type = "text";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+                eyeIcon.style.color = "#3b82f6"; // Blue color jab visible ho
+            } else {
+                passInput.type = "password";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+                eyeIcon.style.color = "#94a3b8"; // Grey color jab hidden ho
+            }
         }
-    });
+    };
+	
 
-
-
-
-       
-  
-
-  
 </script>
 </body>
 </html>
