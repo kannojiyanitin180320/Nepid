@@ -479,12 +479,14 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mainNav.classList.remove('nav-open');
         }
-		function showCSSub1COD() {
+		function showCSSub1DBMS() {
             hideAllViews();
-            document.getElementById('notes-view-cs-sub1-cod').style.display = 'block';
+            document.getElementById('notes-view-cs-sub1-dbms').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mainNav.classList.remove('nav-open');
+            
         }
+        
 		function showCSSub1PWP1() {
             hideAllViews();
             document.getElementById('notes-view-cs-sub1-pwp1').style.display = 'block';
@@ -1063,44 +1065,91 @@ function showITSub2OS() {
         loadCategoryData("notes", "BSC-IT", "PL/SQL", "table-plsql-notes");
     }
 }
-	// 1. Profile menu ko show/hide karne ka function
-function toggleProfileMenu() {
-    const menu = document.getElementById("profileDropdown");
-    if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "flex";
-    } else {
-        menu.style.display = "none";
+function showITSub3PP() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub3-pp').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Python Programming", "table-pp-notes");
     }
 }
+function showITSub2GC() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub2-gc').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
 
-// 2. Kahi aur click karne par menu apne aap band ho jaye
-window.addEventListener('click', function(e) {
-    const avatar = document.getElementById('userProfileAvatar');
-    const dropdown = document.getElementById('profileDropdown');
-    if (avatar && dropdown) {
-        if (!avatar.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.style.display = "none";
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Green Computing", "table-gc-notes");
+    }
+}
+	function showITSub3DS() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub3-ds').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Data Structure", "table-ds-notes");
+    }
+}
+	function showITSub3CN() {
+    hideAllViews();
+    // ID correct kar di gayi hai (sub2-oop)
+    document.getElementById('notes-view-it-sub3-cn').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) mainNav.classList.remove('nav-open');
+
+    if (window.loadCategoryData) {
+        // Firebase call bilkul sahi hai
+        loadCategoryData("notes", "BSC-IT", "Computer Networks", "table-cn-notes");
+    }
+}
+	function showITSub4CJ() {
+    hideAllViews();
+    document.getElementById('notes-view-it-sub4-cj').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
+    if (window.loadCategoryData) {
+        loadCategoryData("notes", "BSC-IT", "Advance Java", "table-cj-notes");
+    }
+}
+function showCSSub1DBMS() {
+    hideAllViews();
+    document.getElementById('notes-view-cs-sub1-dbms').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof mainNav !== 'undefined' && mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
+    if (window.loadCategoryData) {
+        loadCategoryData("notes", "BSC-CS", "Database Management System", "table-dbms-notes");
+    }
+} 
+window.handleLogout = function() {
+        const dropdown = document.getElementById('userDropdown');
+        if (dropdown) dropdown.style.display = 'none';
+
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userClass");
+
+        if (window.auth) {
+            signOut(window.auth).then(() => {
+                window.location.reload(); 
+            }).catch((error) => {
+                console.error("Logout Error:", error);
+                window.location.reload();
+            });
+        } else {
+            window.location.reload();
         }
-    }
-});
-
-// 3. Logout karne ka function
-function logoutUser() {
-    // Data clear karein
-    localStorage.removeItem("userName");
-    
-    // Avatar aur dropdown ko chhupa dein
-    document.getElementById("userProfileAvatar").style.display = "none";
-    document.getElementById("profileDropdown").style.display = "none";
-    
-    // Agar koi Signup/Login button tha toh use wapas dikha dein
-    const loginBtn = document.getElementById('loginBtn');
-    if (loginBtn) loginBtn.style.display = "inline-block";
-    
-    alert("Logged out successfully!");
-    
-    // User ko Home page par wapas bhej dein
-    if (typeof window.showHome === 'function') {
-        window.showHome();
-    }
-}
+    };
