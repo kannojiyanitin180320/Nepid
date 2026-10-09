@@ -123,50 +123,19 @@
 					
                 </ul>
             </nav>
-<div class="header-actions">
+
+            <div class="header-actions">
                <div class="header-actions" style="display: flex; align-items: center; gap: 16px;">
-                
-                <!-- Dark Mode Toggle Button (Wapas aa gaya!) -->
                 <button id="themeToggle" onclick="toggleDarkMode()" style="background: none; border: none; font-size: 22px; color: var(--text-main); cursor: pointer; transition: transform 0.3s;" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon" style="margin-left: 20px; cursor: pointer;" onclick="toggleTheme()"></i>
                 </button>
-                
-                <!-- Search Bar (Wapas aa gaya!) -->
 				<div class="mobile-search" style="display: flex; align-items: center; margin-left: 25px; margin-right: 25px; position: relative;">
-                    <input type="text" id="globalSearchInput" onkeypress="if(event.key === 'Enter') executeSearch()" placeholder="Search notes, syllabus..." style="padding: 10px 15px 10px 35px; border-radius: 20px; border: 1px solid #cbd5e1; background: transparent; color: inherit; outline: none; width: 250px; font-size: 14px;">
-                    <i class="fas fa-search" style="position: absolute; left: 12px; color: #64748b; font-size: 14px;"></i>
-                    <button onclick="executeSearch()" class="search-go-btn" style="position: absolute; right: 5px; border: none; border-radius: 15px; padding: 6px 15px; font-size: 12px; font-weight: 600; cursor: pointer; transition: 0.3s;">Go</button>
-                </div>
-                
-                <!-- 👇 NAYA PROFILE ICON WITH DROPDOWN MENU 👇 -->
-                <div style="position: relative; display: inline-block; margin-left: 10px;">
-                    
-                    <!-- Avatar Icon (Clickable) -->
-                    <div id="userProfileAvatar" title="My Profile" onclick="toggleProfileMenu()" style="display: none; width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #4f46e5, #818cf8); color: #ffffff; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); text-transform: uppercase; user-select: none;">
-                        <span id="userInitial"></span>
-                    </div>
+    <input type="text" id="globalSearchInput" onkeypress="if(event.key === 'Enter') executeSearch()" placeholder="Search notes, syllabus..." style="padding: 10px 15px 10px 35px; border-radius: 20px; border: 1px solid #cbd5e1; background: transparent; color: inherit; outline: none; width: 250px; font-size: 14px;">
+    <i class="fas fa-search" style="position: absolute; left: 12px; color: #64748b; font-size: 14px;"></i>
+    <button onclick="executeSearch()" class="search-go-btn" style="position: absolute; right: 5px; border: none; border-radius: 15px; padding: 6px 15px; font-size: 12px; font-weight: 600; cursor: pointer; transition: 0.3s;">Go</button>
+</div>
 
-                    <!-- Dropdown Menu (Details & Logout) -->
-                    <div id="profileDropdown" style="display: none; position: absolute; right: 0; top: 50px; background: var(--card-bg, #ffffff); width: 200px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); padding: 16px; z-index: 1000; border: 1px solid var(--border-color, #e2e8f0); flex-direction: column; gap: 12px;">
-                        
-                        <div style="border-bottom: 1px solid var(--border-color, #eef0f7); padding-bottom: 10px; margin-bottom: 4px;">
-                            <h4 id="displayUserName" style="margin: 0; font-size: 15px; color: var(--text-main, #1f2937); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Student Name</h4>
-                            <p id="displayUserClass" style="margin: 4px 0 0 0; font-size: 12px; color: var(--text-muted, #64748b); font-weight: 500;">BSC-IT</p>
-                        </div>
-                        
-                        <button onclick="logoutUser()" style="width: 100%; text-align: left; background: #fee2e2; color: #ef4444; border: none; padding: 10px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </button>
-                        
-                    </div>
-                </div>
-                <!-- 👆 NAYA PROFILE ICON END 👆 -->
-             
-            </div>
-        </div>
-    </header>
-<!-- 👆 NAYA PROFILE ICON END 👆 -->
-    </header>
+
                 
              
             </div>
@@ -205,26 +174,26 @@
         <p>Welcome to our Nepid platform.</p> 
     </div>
     
-    <div class="feature-card" onclick="showNotes()" style="cursor: pointer;">
+    <div class="feature-card" onclick="showNotesIT()" style="cursor: pointer;">
         <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
         <h3>Online Notes</h3>
         <p>BSC-CS, BSC-IT & BSC-DS</p>
     </div>
 	
     
-    <div class="feature-card" onclick="showNotes()" style="cursor: pointer;">
+    <div class="feature-card" onclick="showReferenceBook();" style="cursor: pointer;">
         <div class="icon-wrapper"><i class="fas fa-book-open"></i></div>
         <h3>Reference Book</h3>
         <p>BSC-CS, BSC-IT & BSC-DS</p>
     </div>
     
-    <div class="feature-card" onclick="showQuestionPapers()" style="cursor: pointer;">
-        <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
-        <h3>MU Question Papers</h3>
-        <p>BSC-CS, BSC-IT.</p>
-    </div>
+  <div class="feature-card" onclick="window.showQuestionPapersIT()" style="cursor: pointer;">
+    <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
+    <h3>MU Question Papers</h3>
+    <p>BSC-CS, BSC-IT.</p>
+</div>
     
-    <div class="feature-card" onclick="showMuResult()" style="cursor: pointer;">
+    <div class="feature-card" onclick="showMuResultIT()" style="cursor: pointer;">
         <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
         <h3>MU Result</h3>
     </div>
@@ -841,22 +810,14 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> GC QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-gc-notes">
+                            
                             <tr>
                                 <td class="col-no">2</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> GC Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> GC Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -889,7 +850,7 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody id="notes-table-it">
                             <tr>
                                 <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Python Programming</span></td>
@@ -903,7 +864,7 @@
                             <tr>
                                 <td class="col-no">3</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #3 Computer Networks</span></td>
-                                <td class="col-action"><a href="#" class="btn-open" onclick="showCSSub4CN(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                                <td class="col-action"><a href="#" class="btn-open" onclick="showITSub3CN(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
                             <tr>
                                 <td class="col-no">4</td>
@@ -948,22 +909,14 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> PP QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                         <tbody id="table-pp-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> PP Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> PP Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> PP Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -998,22 +951,14 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DS QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-ds-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DS Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DS Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DS Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -1048,22 +993,14 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-cn-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -1099,21 +1036,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                             <tr>
                                 <td class="col-no">2</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -1149,21 +1078,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> AM QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                             <tr>
                                 <td class="col-no">2</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> AM Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> AM Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -1196,10 +1117,10 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody id="notes-table-it">
                             <tr>
         <td class="col-no">1</td>
-        <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Core Java</span></td>
+        <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Advance Java</span></td>
         <td class="col-action"><a href="#" class="btn-open" onclick="showITSub4CJ(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
     </tr>
                             <tr>
@@ -1229,6 +1150,47 @@
         </section>
     </div>
 
+       <div id="notes-view-it-sub4-cj">
+        <div class="container page-head">
+            <div class="breadcrumb">
+                <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
+                <a onclick="showNotesIT(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
+                <a onclick="showNotesIT(); return false;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
+                <a onclick="showNotesITSub4(); return false;">Semester-4</a> <i class="fas fa-chevron-right"></i>
+                <span>Advance Java</span>
+            </div>
+            <h1>Advance Java</h1>
+            <p>Notes and question bank for Advance java, BSC-IT Semester-4.</p>
+        </div>
+
+        <section class="table-section">
+            <div class="container">
+                <div class="table-card">
+                    <div class="table-card-head centered">
+                        <h2>Advance Java Notes</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="col-no">No</th>
+                                <th>Notes Name</th>
+                                <th class="col-action">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-cj-notes">
+                           
+                            <tr>
+                                <td class="col-no">1</td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Java Notes</span></td>
+                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
 
 	 <div id="notes-view-it-sub4-ies">
         <div class="container page-head">
@@ -1509,8 +1471,8 @@
                         <tbody>
                             <tr>
         <td class="col-no">1</td>
-        <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Computer Organization and Design</span></td>
-        <td class="col-action"><a href="#" class="btn-open" onclick="showCSSub1COD(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
+        <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> #1 Database Management System</span></td>
+        <td class="col-action"><a href="#" class="btn-open" onclick="showCSSub1DBMS(); return false;">Click Here <i class="fas fa-arrow-right"></i></a></td>
     </tr>
                            <tr>
         <td class="col-no">2</td>
@@ -3860,24 +3822,24 @@
             </div>
         </section>
     </div>
-	<div id="notes-view-cs-sub1-cod">
+	 <div id="notes-view-cs-sub1-dbms" class="view-section" style="display: none;">
         <div class="container page-head">
             <div class="breadcrumb">
                 <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesCS(); return false;">Notes</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesCS(); return false;">MU BSC Computer Science 2024</a> <i class="fas fa-chevron-right"></i>
                 <a onclick="showNotesCSSub1(); return false;">Semester-1</a> <i class="fas fa-chevron-right"></i>
-                <span>Computer Organization and Design</span>
+                <span>Database Management Systems</span>
             </div>
-            <h1>Computer Organization and Design Notes</h1>
-            <p>Notes and question bank for Computer Organization and Design, BSC-CS Semester-1.</p>
+            <h1>Database Management Systems Notes</h1>
+            <p>Notes and question bank for Database Management Systems, BSC-CS Semester-1.</p>
         </div>
 
         <section class="table-section">
             <div class="container">
                 <div class="table-card">
                     <div class="table-card-head centered">
-                        <h2>Computer Organization and Design Notes</h2>
+                        <h2>Database Management Systems Notes</h2>
                     </div>
                     <table>
                         <thead>
@@ -3887,22 +3849,14 @@
                                 <th class="col-action">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> COD QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                        <tbody id="table-dbms-notes">
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> COD Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> COD Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -5015,21 +4969,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN QB</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                           
                             <tr>
                                 <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes-1</span></td>
+                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="col-no">3</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> CN Notes-2</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -6598,9 +6544,7 @@
                             <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); font-size: 14px;">Enter 6-Digit Email OTP</label>
                             <input type="text" id="signupOTP" placeholder="Enter OTP sent to your Email" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: transparent; color: var(--text-main); letter-spacing: 2px; text-align: center; font-size: 18px;">
                         </div>
-                        <button class="btn btn-success" onclick="verifyOTP()">Verify & Create Account</button>
-                                                                               
-                                                
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; background-color: #10b981;">Verify & Create Account</button>
                     </form>
 
                     <!-- Status Message -->
@@ -6669,46 +6613,49 @@
             </div>
         </section>
     </div>
-	<div id="updates-view" style="display: none;">
-        <div class="container page-head">
-            <div class="breadcrumb">
-                <a onclick="showHome(); return false;">Home</a> <i class="fas fa-chevron-right"></i>
-                <span>Updates</span>
-            </div>
-            <h1>Latest Updates</h1>
-            <p>Stay informed with the latest announcements, new study materials, and MU news.</p>
+	
+<!-- ========================================== -->
+<!-- 🚀 LATEST UPDATES VIEW SECTION -->
+<!-- ========================================== -->
+<div id="updates-view" class="view-section" style="display: none;">
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="showHome(); return false;" style="cursor: pointer;">Home</a> <i class="fas fa-chevron-right"></i>
+            <span>Latest Updates</span>
         </div>
+        <h1>Latest Updates</h1>
+        <p>Stay informed with the latest notes, announcements, and question papers.</p>
+    </div>
 
-        <section class="table-section">
-            <div class="container" style="max-width: 800px; margin: 0 auto;">
-                <div class="table-card" style="padding: 40px;">
-                    
-                    <div style="border-bottom: 1px solid #eef0f7; padding-bottom: 20px; margin-bottom: 20px;">
-                        <span style="background-color: #e0e7ff; color: var(--primary-color); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px;">New Notes</span>
-                        <h3 style="font-size: 18px; color: var(--text-main); margin-bottom: 8px;">BSC-IT Semester 6 Notes Uploaded</h3>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">All subject notes for BSC-IT Semester 6 including SQA, SIC, and BI have been successfully uploaded and are ready to download.</p>
-                        <p style="color: #9ca3af; font-size: 12px;"><i class="far fa-clock"></i> Just now</p>
-                    </div>
-
-                    <div style="border-bottom: 1px solid #eef0f7; padding-bottom: 20px; margin-bottom: 20px;">
-    <span style="background-color: #dc2626; color: #ffffff; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px;">Announcement</span>
-    
-    <h3 style="font-size: 18px; color: var(--text-main); margin-bottom: 8px;">Mumbai University Exam Timetable</h3>
-    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">The official exam timetable for the upcoming semester exams has been released. Please check the MU Results section for the direct link.</p>
-    <p style="color: #9ca3af; font-size: 12px;"><i class="far fa-clock"></i> 2 days ago</p>
+    <section class="updates-section" style="padding: 20px 0;">
+        <div class="container">
+            <!-- Table Card Container -->
+            <div style="background: var(--card-bg, #ffffff); border: 1px solid var(--border-color, rgba(0,0,0,0.08)); padding: 0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); overflow: hidden;">
+                
+                <table style="width: 100%; border-collapse: collapse; text-align: left; table-layout: auto;">
+                    <thead style="background: var(--hover-bg, rgba(0,0,0,0.02));">
+                        <tr style="border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.08)); color: var(--text-muted, #64748b); font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                            <th style="padding: 16px 20px; font-weight: 600; width: 15%;">TYPE</th>
+                            <th style="padding: 16px 20px; font-weight: 600;">TITLE / SUBJECT</th>
+                            <th style="padding: 16px 20px; font-weight: 600; text-align: right; width: 15%;">ACTION</th>
+                        </tr>
+                    </thead>
+                    <!-- NAYA, SIMPLE ID YAHAN HAI -->
+                    <tbody id="latest-updates-list">
+                        <tr>
+                            <td colspan="3" style="text-align:center; padding: 40px; color: var(--text-muted);">
+                                <i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Loading latest updates...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </section>
 </div>
 
-                    <div>
-                        <span style="background-color: #d1fae5; color: #059669; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px;">Feature</span>
-                        <h3 style="font-size: 18px; color: var(--text-main); margin-bottom: 8px;">Question Papers Archive Updated</h3>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 10px;">We have added the latest 2024 question papers for BSC-CS and BSC-DS students to help with your exam preparation.</p>
-                        <p style="color: #9ca3af; font-size: 12px;"><i class="far fa-clock"></i> 1 week ago</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </div>
+        
    	<div id="admin-dashboard-view" style="display: none;">
     <div class="container page-head">
         <div class="breadcrumb">
@@ -6737,6 +6684,7 @@
                             <option value="syllabus" style="color: black;">Syllabus</option>
                             <option value="question_paper" style="color: black;">Question Paper (PYQ)</option>
                             <option value="mu_result" style="color: black;">MU Result</option>
+							<option value="reference_book"style="color: black;">Reference Book</option>
                         </select>
                     </div>
 
@@ -6885,6 +6833,45 @@
 
         </div>
     </div>
+	<!-- ========================================== -->
+<!-- 🚀 REFERENCE BOOK VIEW PAGE -->
+<!-- ========================================== -->
+<div id="reference-book-view" class="view-section" style="display: none;">
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="showHome(); return false;" style="cursor: pointer;">Home</a> <i class="fas fa-chevron-right"></i>
+            <span>Reference Book</span>
+        </div>
+        <h1>Reference Books</h1>
+        <p>Download reference books for BSC-CS, BSC-IT & BSC-DS.</p>
+    </div>
+
+    <section class="table-section">
+        <div class="container">
+            <div class="table-card">
+                <div class="table-card-head centered">
+                    <h2>Available Books</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Aapke screenshot ke hisab se Headers -->
+                            <th class="col-no">NO</th>
+                            <th>BOOK NAME / SEMESTER</th>
+                            <th class="col-action" style="text-align: right;">ACTION</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- FIREBASE SE DATA YAHAN AAYEGA -->
+                    <tbody id="table-reference-book">
+                        <!-- Iske andar kuch mat likhna -->
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
 
 	<footer> <!-- cing -->
         <div class="container">
@@ -6933,15 +6920,17 @@
             </p>
         </div>
         </div>
-		
     </footer>
 
     <script src="script.js"></script> <!-- bing -->
 	
-	<!-- ========================================== -->
+
+<!-- ========================================== -->
 <!-- 🔥 FIREBASE CONNECTION & LOGIC SCRIPT 🔥   -->
 <!-- ========================================== -->
 <script type="module" src="firebase.js"></script>
+	
+</script>
 </body>
 </html>
 
