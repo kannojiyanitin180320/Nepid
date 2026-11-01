@@ -187,16 +187,15 @@
         <p>BSC-CS, BSC-IT & BSC-DS</p>
     </div>
     
-  <div class="feature-card" onclick="showQPIT()" style="cursor: pointer;">
+ <div class="feature-card" onclick="showQPIT();" style="cursor: pointer;">
     <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
     <h3>MU Question Papers</h3>
     <p>BSC-CS, BSC-IT.</p>
 </div>
-    
-    <div class="feature-card" onclick="showResIT()" style="cursor: pointer;">
-        <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
-        <h3>MU Result</h3>
-    </div>
+   <div class="feature-card" onclick="showResIT()" style="cursor: pointer;">
+    <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+    <h3>MU Result</h3>
+</div>
     
     <div class="feature-card" onclick="showUpdates()" style="cursor: pointer;">
         <div class="icon-wrapper"><i class="fas fa-laptop-code"></i></div>
@@ -1038,7 +1037,7 @@
                         <tbody>
                            
                             <tr>
-                                <td class="col-no">2</td>
+                                <td class="col-no">1</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes-1</span></td>
                                 <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
                             </tr>
@@ -2353,10 +2352,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-no">1</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-1</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                               <td class="col-action">
+    <!-- onclick aur return false check karein -->
+    <a href="#" class="btn-open" onclick="window.showITSemester1(); return false;">
+        Click Here <i class="fas fa-arrow-right"></i>
+    </a>
+</td>
                             <tr>
                                 <td class="col-no">2</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-2</span></td>
@@ -2388,6 +2389,80 @@
             </div>
         </section>
     </div>
+    <!-- ========================================== -->
+<!-- BSC-IT SEMESTER-1 SUBJECTS VIEW -->
+<!-- ========================================== -->
+<div id="view-it-semester-1" class="view-section" style="display: none;">
+    
+    <!-- Page Header -->
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="window.showHome(); return false;" style="cursor: pointer;">Home</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="window.showNotesIT(); return false;" style="cursor: pointer;">MU BSC Information Technology 2024</a> <i class="fas fa-chevron-right"></i>
+            <span>Semester-1</span>
+        </div>
+        <h1>BSC-IT Semester-1 Subjects</h1>
+        <p>Subject-wise notes and question bank for Mumbai University BSc Information Technology, Semester-1.</p>
+    </div>
+
+    <!-- Table Section -->
+    <section class="table-section">
+        <div class="container">
+            <div class="table-card">
+                
+                <div class="table-card-head">
+                    <h2>Semester-1 Subjects</h2>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-no">NO</th>
+                            <th>SUBJECT NAME</th>
+                            <th class="col-action">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-it-sem1-subjects">
+                        
+                        <!-- Row 1 -->
+                        <tr>
+                            <td class="col-no">1</td>
+                            <td>
+                                <span class="sem-name">
+                                    <span class="folder-icon"><i class="fas fa-folder"></i></span> 
+                                    Imperative Programming Notes
+                                </span>
+                            </td>
+                            <td class="col-action">
+                                <!-- onclick me apne next page ka function daalein -->
+                                <a href="#" class="btn-open" onclick="window.showITSub1IP(); return false;">
+                                    Click Here <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <!-- Row 2 -->
+                        <tr>
+                            <td class="col-no">2</td>
+                            <td>
+                                <span class="sem-name">
+                                    <span class="folder-icon"><i class="fas fa-folder"></i></span> 
+                                    Digital Electronics Notes
+                                </span>
+                            </td>
+                            <td class="col-action">
+                                <a href="#" class="btn-open" onclick="window.showITSub2DE(); return false;">
+                                    Click Here <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
 
     <div id="qp-view-cs">
         <div class="container page-head">
@@ -2437,9 +2512,10 @@
                             </tr>
                             <tr>
                                 <td class="col-no">5</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-5</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
+                            <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-5</span></td>
+                            <td class="col-action">
+                                <a href="#" class="btn-open" onclick="window.showCSSemester5(); return false;">Click Here <i class="fas fa-arrow-right"></i></a>
+                            </td>
                             <tr>
                                 <td class="col-no">6</td>
                                 <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> Semester-6</span></td>
@@ -2451,6 +2527,44 @@
             </div>
         </section>
     </div>
+    <div id="view-cs-semester-5" class="view-section" style="display: none;">
+    <div class="container page-head">
+        <div class="breadcrumb">
+            <a onclick="window.showHome(); return false;" style="cursor: pointer;">Home</a> <i class="fas fa-chevron-right"></i>
+            <a onclick="window.showQuestionPapersCS(); return false;" style="cursor: pointer;">MU BSC Computer Science 2024</a> <i class="fas fa-chevron-right"></i>
+            <span>Semester-5</span>
+        </div>
+        <h1>BSC-CS Semester-5 Question Papers</h1>
+        <p>Semester-wise question papers for Mumbai University BSc Computer Science.</p>
+    </div>
+
+    <section class="table-section">
+        <div class="container">
+            <div class="table-card">
+                <div class="table-card-head">
+                    <h2>Semester-5 Documents</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-no">NO</th>
+                            <th>DOCUMENT TITLE</th>
+                            <th class="col-action">ACTION</th>
+                        </tr>
+                    </thead>
+                    <!-- ID exact JS wali honi chahiye -->
+                    <tbody id="table-cs-sem5-data">
+                        <tr>
+                            <td colspan="3" style="text-align: center; color: #a1a1aa;">
+                                <i class="fas fa-spinner fa-spin"></i> Fetching PDFs from Firebase...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
 
     <div id="qp-view-ds">
         <div class="container page-head">
@@ -3850,14 +3964,12 @@
                             </tr>
                         </thead>
                         <tbody id="table-dbms-notes">
-                           
-                            <tr>
-                                <td class="col-no">2</td>
-                                <td><span class="sem-name"><span class="folder-icon"><i class="fas fa-folder"></i></span> DBMS Notes</span></td>
-                                <td class="col-action"><a href="#" class="btn-open">Click Here <i class="fas fa-arrow-right"></i></a></td>
-                            </tr>
-                           
-                        </tbody>
+    <tr>
+        <td colspan="3" style="text-align: center; padding: 30px; color: #64748b;">
+            <i class="fas fa-spinner fa-spin"></i> Loading notes from Firebase...
+        </td>
+    </tr>
+</tbody>
                     </table>
                 </div>
             </div>
@@ -6924,7 +7036,9 @@
 
     <script src="script.js"></script> <!-- bing -->
 	
-
+<!-- ========================================== -->
+<!-- 🔥 FIREBASE CONNECTION & LOGIC SCRIPT 🔥  -->
+<!-- ========================================== -->
 <!-- ========================================== -->
 <!-- 🔥 FIREBASE CONNECTION & LOGIC SCRIPT 🔥   -->
 <!-- ========================================== -->
