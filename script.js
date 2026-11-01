@@ -479,7 +479,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mainNav.classList.remove('nav-open');
         }
-		function showCSSub1DBMS() {
+		function showCSSub1DBMS() {            // kinglion 
             hideAllViews();
             document.getElementById('notes-view-cs-sub1-dbms').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1124,17 +1124,26 @@ function showITSub2GC() {
         loadCategoryData("notes", "BSC-IT", "Advance Java", "table-cj-notes");
     }
 }
-function showCSSub1DBMS() {
-    hideAllViews();
-    document.getElementById('notes-view-cs-sub1-dbms').style.display = 'block';
+window.showCSSub1DBMS = function() {
+    if (typeof window.hideAllViews === 'function') {
+        window.hideAllViews();
+    }
+
+    const view = document.getElementById('notes-view-cs-sub1-dbms');
+    if (view) {
+        view.style.display = 'block';
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
     if (typeof mainNav !== 'undefined' && mainNav) {
         mainNav.classList.remove('nav-open');
     }
-    if (window.loadCategoryData) {
-        loadCategoryData("notes", "BSC-CS", "Database Management System", "table-dbms-notes");
+
+    if (typeof window.loadCategoryData === 'function') {
+        window.loadCategoryData("notes", "BSC-CS", "Database Management System", "table-dbms-notes");
     }
-} 
+};
 window.handleLogout = function() {
         const dropdown = document.getElementById('userDropdown');
         if (dropdown) dropdown.style.display = 'none';
@@ -1153,3 +1162,120 @@ window.handleLogout = function() {
             window.location.reload();
         }
     };
+// Is function ko apni script.js file ke bottom ya function list mein kahin par bhi add kar dein.
+window.showQuestionPapersIT = function() {
+    // 1. Baaki sabhi views ko hide karein (Ensure ki window.hideAllViews exist karta ho)
+    if (typeof window.hideAllViews === 'function') {
+        window.hideAllViews();
+    }
+
+    // 2. Question papers wale section ko show karein
+    const qpView = document.getElementById('question-papers-it-view');
+    if (qpView) {
+        qpView.style.display = 'block';
+    } else {
+        console.error("Error: 'question-papers-it-view' ID wala div HTML me nahi mila!");
+    }
+
+    // 3. Page ko smoothly top par scroll karein
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // 4. Agar mobile me menu open hai, toh use close karein
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
+};
+window.showITSemester1 = function() {
+    if (typeof window.hideAllViews === 'function') {
+        window.hideAllViews();
+    }
+    const sem1View = document.getElementById('view-it-semester-1');
+    if (sem1View) {
+        sem1View.style.display = 'block';
+    } else {
+        console.error("Error: 'view-it-semester-1' div HTML me nahi mila!");
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
+};
+window.showITSemester5 = function() {
+    if (typeof window.hideAllViews === 'function') {
+        window.hideAllViews();
+    }
+    const sem5View = document.getElementById('view-it-semester-5');
+    if (sem5View) {
+        sem5View.style.display = 'block';
+    } else {
+        console.error("Error: 'view-it-semester-5' div HTML me nahi mila!");
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) {
+        mainNav.classList.remove('nav-open');
+    }
+};
+window.showCSSemester5 = function() {
+    if (typeof window.hideAllViews === 'function') window.hideAllViews();
+    
+    const sem5ViewCS = document.getElementById('view-cs-semester-5');
+    if (sem5ViewCS) {
+        sem5ViewCS.style.display = 'block';
+    } else {
+        console.error("Error: 'view-cs-semester-5' div HTML me nahi mila!");
+    }
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) mainNav.classList.remove('nav-open');
+};
+ window.showCSSemester5 = function() {
+    if (typeof window.hideAllViews === 'function') window.hideAllViews();
+    
+    const sem5ViewCS = document.getElementById('view-cs-semester-5');
+    if (sem5ViewCS) sem5ViewCS.style.display = 'block';
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) mainNav.classList.remove('nav-open');
+
+    if (typeof window.loadCategoryData === 'function') {
+       
+        window.loadCategoryData("question_paper", "BSC-CS", "Semester 5 Question Papers", "table-cs-sem5-data");
+    }
+};
+window.showCSSemester5 = function() {
+    if (typeof window.hideAllViews === 'function') window.hideAllViews();
+    
+    const sem5ViewCS = document.getElementById('view-cs-semester-5');
+    if (sem5ViewCS) sem5ViewCS.style.display = 'block';
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) mainNav.classList.remove('nav-open');
+
+    if (typeof window.loadCategoryData === 'function') {
+        // Yahan exact Firebase wala data fetch ho raha hai
+        window.loadCategoryData("question_paper", "BSC-CS", "Semester 5 Question Papers", "table-cs-sem5-data");
+    }
+};
+window.showCSSemester5 = function() {
+    if (typeof window.hideAllViews === 'function') window.hideAllViews();
+    
+    const sem5ViewCS = document.getElementById('view-cs-semester-5');
+    if (sem5ViewCS) sem5ViewCS.style.display = 'block';
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const mainNav = document.getElementById('mainNav');
+    if (mainNav) mainNav.classList.remove('nav-open');
+
+    if (typeof window.loadCategoryData === 'function') {
+        // Yeh akeli line ab aapke Sem-5 ke saare papers ek sath table mein load kar degi
+        window.loadCategoryData("question_paper", "BSC-CS", "Semester 5 Question Papers", "table-cs-sem5-data");
+    }
+};
